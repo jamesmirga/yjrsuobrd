@@ -1,6 +1,6 @@
 import random
 import requests
-from bitcoin import *
+from bit import Key
 
 def generate_private_key(start_range, end_range):
     private_key_int = random.randint(start_range, end_range)
