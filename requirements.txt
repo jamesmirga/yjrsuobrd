@@ -1,2 +1,7 @@
-bitcoin==1.1.42
-Requests==2.32.3
+multiprocessing
+os
+json
+ecdsa
+p2pkh_util
+common_util
+time
