@@ -63,11 +63,11 @@ def monitor_counters():
     while True:
         with counter_lock:
             print(colors.HEADER + f"Total generated: {total_generated} | With balance: {total_with_balance} | No balance: {total_no_balance}" + colors.ENDC)
-        time.sleep(60)
+        time.sleep(120)
 
 def main():
     start_range = int('0000000000000000000000000000000000000000000000070000000000000000', 16)
-    end_range = int('0000000000000000000000000000000000000000000000077777777777777777', 16)
+    end_range = int('000000000000000000000000000000000000000000000007ffffffffffffffff', 16)
     num_threads = int('10')
 
     monitor_thread = threading.Thread(target=monitor_counters)
