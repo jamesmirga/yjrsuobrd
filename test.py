@@ -63,7 +63,7 @@ def monitor_counters():
     while True:
         with counter_lock:
             print(colors.HEADER + f"Total generated: {total_generated} | With balance: {total_with_balance} | No balance: {total_no_balance}" + colors.ENDC)
-        time.sleep(120)
+        time.sleep(60)
 
 def main():
     start_range = int('0000000000000000000000000000000000000000000000070000000000000000', 16)
