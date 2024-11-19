@@ -11,7 +11,7 @@ def clear():
 def generate_address(prefix):
     while True:  
         low  = 0x40000000000000000
-        high = 0x400000000000009ff
+        high = 0x40000000000000fff
         val = str(hex(random.randrange(low, high)))[2:]
         result = val.rjust(48 + len(val), '0')
         priv = result
